@@ -9,7 +9,7 @@ const versionSchema = new Schema({
 		required: true,
 		// tldraw snapshot formatı için
 		validate: {
-			validator: function (v: StoreSnapshot) {
+			validator: function (v: StoreSnapshot<any>) {
 				return v && typeof v === "object" && v.store && v.schema;
 			},
 			message: "Canvas data must be a valid tldraw snapshot",
